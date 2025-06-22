@@ -1,0 +1,24 @@
+{
+  "name": "xlsx-to-csv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && echo 'Build completed.'",
+    "start": "npm run build && echo 'Starting...' && node .build/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "exceljs": "^4.4.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "@types/winston": "^2.4.4",
+    "typescript": "^5.8.3"
+  }
+}
