@@ -61,17 +61,18 @@ export const convertXLSXToJSON = async (file: string): Promise<Object[]> => {
     const headers: string[] = [];
     let isFirstRow = true;
 
-    worksheet.eachRow((row, rowNumber) => {
+    worksheet.eachRow((row) => {
       if (isFirstRow) {
         row.eachCell((cell) => {
-          headers.push(cell.text);
+          headers.push(String(cell.text ?? cell.value ?? '').trim());
         });
         isFirstRow = false;
       } else {
         const rowData: Object = {};
         row.eachCell((cell, colNumber) => {
           const key = headers[colNumber - 1] || `column_${colNumber}`;
-          rowData[key] = cell.value;
+          let value: any = cell.value;
+          rowData[key] = value;
         });
         result.push(rowData);
       }
