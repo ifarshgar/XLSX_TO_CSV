@@ -5,6 +5,7 @@ A simple tool to convert Excel `.xlsx` files to `.csv` format.
 ## Features
 
 - Converts `.xlsx` files to `.csv`
+- Converts `.xlsx` files to `JSON`
 - Supports multiple sheets
 - Easy to use CLI
 
